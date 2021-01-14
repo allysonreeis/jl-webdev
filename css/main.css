@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Usar unidade 'em' é melhor que 'px'. 320px/16 = 20em */
+@media screen and (min-width: 320px) {
+  .jl-page-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    /*box-sizing: border-box;*/ /* Usar quando o seletor acima for body*/
+    background-color: hsl(0, 0%, 11%);
+    border: 30px solid #000;
+  }
+
+  .jl-topbar {
+    width: 100%;
+    height: 110px;
+    display: block;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .jl-logo {
+    width: 75px;
+    height: 100px;
+    float: left;
+    margin-left: 60px;
+    color: white;
+    background-color: #2CCB69;
+    border-radius: 0 0 37px 0;
+  }
+
+  .jl-logo img {
+    width: 46px;
+    height: 31px;
+    display: block;
+    margin: 55px auto 0;
+  }
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 1364px) {
+
+}
+
+@media screen and (min-width: 1600px) {
+
+}
