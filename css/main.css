@@ -18,15 +18,38 @@ p {
   font-family: 'Open Sans', sans-serif;
 }
 
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
 /* Usar unidade 'em' é melhor que 'px'. 320px/16 = 20em */
 @media screen and (min-width: 320px) {
-  .jl-page-wrapper {
+  .jl-page-wrapper, .jl-preloader {
     width: 100%;
     height: 100vh;
     display: block;
     /*box-sizing: border-box;*/ /* Usar quando o seletor acima for body*/
     background-color: hsl(0, 0%, 11%);
     border: 30px solid #000;
+  }
+
+  .jl-preloader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .jl-preloader p {
+    color: var(--color-light);
+    margin-top: 15px;
   }
 
   .jl-topbar {
@@ -74,6 +97,7 @@ p {
     z-index: 200;
     transition: all 0.2s ease-out;
     cursor: pointer;
+    border: none;
   }
 
   .jl-contact-info-inner {
@@ -223,4 +247,8 @@ p {
 
 .jl-change-icon {
   background-position-y: -45px;
+}
+
+.jl-fade-out {
+  animation: fadeOut 2s forwards ease-out;
 }
