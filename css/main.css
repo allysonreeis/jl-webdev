@@ -29,7 +29,7 @@ p {
   .jl-page-wrapper, .jl-preloader {
     width: 100%;
     height: 100vh;
-    display: block;
+    display: table;
     /*box-sizing: border-box;*/ /* Usar quando o seletor acima for body*/
     background-color: hsl(0, 0%, 11%);
     border: 30px solid #000;
@@ -169,6 +169,30 @@ p {
     right: -1px;
     background: transparent url('../images/corner.svg') no-repeat;
   }
+
+  .container-fluid h1 {
+    font-size: 110px;
+  }
+
+  .container-fluid h1, span {
+    color: var(--color-green);
+  }
+  .container-fluid  p {
+    color: var(--color-light);
+    font-size: 13px;
+  }
+
+  /*----HOME----*/
+  .jl-display-text {
+    margin-top: 7%;
+  }
+
+  #jl-home-presentation {
+    background-image: url('../images/joao-lemon-designer-home.png');
+    background-repeat: no-repeat;
+    background-position: 55% bottom;
+    background-size: contain;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -251,4 +275,13 @@ p {
 
 .jl-fade-out {
   animation: fadeOut 2s forwards ease-out;
+}
+
+.jl-full-height {
+  height: 100vh;
+}
+
+
+.jl-first-section {
+  height: calc(100vh - 30px);
 }
