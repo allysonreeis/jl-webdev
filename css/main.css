@@ -352,6 +352,51 @@ p {
 
 }
 
+/* BOTÕES */
+
+.jl-btn {
+  display: table;
+  text-align: center;
+  border: none;
+  font-family: 'Open sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.jl-btn-medium {
+  height: 38px;
+  padding: 0 27px;
+  border-radius: 19px;
+  font-size: 14px;
+}
+
+.jl-btn-large {
+  height: 45px;
+  padding: 0 35px;
+  border-radius: 23px;
+  font-size: 16px;
+}
+
+.jl-btn-green {
+  background-color: var(--color-green);
+  color: #1C1C1C;
+}
+
+.jl-btn-green:hover {
+  background-color: rgb(6, 135, 55);
+  color: #FFF;
+}
+
+.jl-btn-dark {
+  background-color: #151515;
+  color: var(--color-green);
+}
+
+.jl-btn-dark:hover {
+  background-color: #212121;
+  color: #FFF;
+}
 
 /* CLASSE COMPORTAMENTO */
 
