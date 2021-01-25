@@ -512,7 +512,7 @@ h1 {
 }
 
 .jl-fade-out {
-  animation: fadeOut 2s forwards ease-out;
+  animation: fadeOut 1s forwards ease-out;
 }
 
 .jl-full-height {
