@@ -463,6 +463,26 @@ h1 {
     color: #2CCB69;
     cursor: pointer;
   }
+
+  .jl-slider-container {
+    display: block;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  .jl-slider-list {
+    width: auto;
+    height: 600px;
+    display: block;
+    background-color: deeppink;
+    list-style: none;
+  }
+
+  .jl-slider-item {
+    display: block;
+    height: 500px;
+    float: left;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -624,4 +644,25 @@ h1 {
 .jl-noradius-left {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.green {
+  background-color: green;
 }
