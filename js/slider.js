@@ -10,7 +10,8 @@ var sliderPos = 0;
 var currentSlide = document.querySelector('.jl-current-slide');
 var totalSlide = document.querySelector('.jl-total-slide');
 var currentCounter = 1;
-
+var navItems = document.querySelectorAll('.jl-item-navigator a');
+var navCounter = document.querySelector('.jl-navigator-counter span');
 
 // Capturando larguras individuais
 var containerWidth = sliderContainer.parentElement.offsetWidth;
@@ -75,6 +76,7 @@ var counterAdd = function(){
   if (currentCounter >= 0 && currentCounter < sliderTotalItems) {
     currentCounter++;
     currentSlide.innerHTML = counterFormatter(currentCounter);
+    navCounter.innerHTML = counterFormatter(currentCounter);
   }
 }
 
@@ -83,21 +85,61 @@ var counterRemove = function(){
   if (currentCounter > 1 && currentCounter <= sliderTotalItems) {
     currentCounter--;
     currentSlide.innerHTML = counterFormatter(currentCounter);
+    navCounter.innerHTML = counterFormatter(currentCounter);
   }
 }
+
+// Set Active Nav
+
+var setActiveNav = function () {
+  for (var i = 0; i < navItems.length; i++) {
+    let myNavNum = parseInt(navItems[i].getAttribute('data-nav'));
+    console.log(myNavNum, currentCounter); 
+
+    if (myNavNum === currentCounter) {
+      navItems[i].classList.add('jl-item-active');
+
+      anime({
+        targets: '.jl-item-active',
+        width: 90
+      });
+
+    }
+  }
+}
+
+var changeActive = function (){
+  for(var i = 0; i < navItems.length; i++){
+    navItems[i].classList.remove('jl-item-active');
+
+    anime({
+      targets: navItems[i],
+      width: 20
+    });
+  }
+
+  setActiveNav();
+}
+
 
 // ACTIONS
 
 totalSlide.innerHTML = counterFormatter(sliderTotalItems);
 
-
+anime ({
+  targets: '.jl-item-active',
+  width: 90
+})
 
 nextItem.addEventListener('click', function(){
   nextSlideAnim();
   counterAdd();
+  changeActive();
 })
 
 prevItem.addEventListener('click', function(){
   prevSlideAnim();
   counterRemove();
+  changeActive();
+  
 })
