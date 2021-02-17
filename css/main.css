@@ -254,7 +254,7 @@ p, label {
       line-height: 24px;
   }
 
-  .jl-social-links {
+  .jl-social-links, .jl-social-links-circle {
       width: 100%;
       height: 45px;
       display: block;
@@ -263,10 +263,33 @@ p, label {
       margin-top: 7px;
   }
 
-  .jl-social {
+  .jl-social-links-circle {
+    left: 0;
+  }
+
+  .jl-social, .jl-social-links-circle .jl-social {
       width: 45px;
       height: 45px;
       display: inline-block;
+  }
+
+  .jl-social-links-circle .jl-social {
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.2s ease-out;
+  }
+
+  .jl-social-links-circle .jl-social ion-icon {
+    height: 45px;
+    transition: all 0.2s ease-out;
+  }
+
+  .jl-social-links-circle .jl-social:hover {
+    background-color: #000;
+  }
+
+  .jl-social-links-circle .jl-social:hover ion-icon {
+    color: #2CCB69;
   }
 
   .jl-social > img {
@@ -453,7 +476,6 @@ p, label {
 
   ion-icon {
       font-size: 32px;
-      color: #2CCB69;
   }
 
   .jl-slider-container {
@@ -580,6 +602,56 @@ p, label {
   .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img {
     left: 75px;
   }
+
+  /*----- SOBRE -----*/
+  #jl-avatar-sobre img {
+    position: relative;
+    left: -15px;
+  }
+
+  /*----- DETALHES -----*/
+  .jl-hero {
+    height: 500px;
+    background-image: url('../pages/portfolio/img/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+  }
+
+  .jl-hero h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+
+  .jl-hero-inner {
+    height: 500px;
+  }
+
+  .jl-hero-inner-content {
+    position: relative;
+  }
+
+  .jl-hero-inner-content::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: block;
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    box-sizing: content-box;
+    padding: 65px;
+  }
+
+  .jl-project-stats {
+    width: 100%;
+    height: 100%;
+    display: table;
+    border-right: 1px solid #2CCB69;
+  }
+
 }
 
 @media screen and (min-width: 576px){
@@ -727,6 +799,11 @@ p, label {
   font-weight: normal;
 }
 
+.jl-subtitle {
+  font-family: 'Open Sans', serif;
+  font-weight: 800;
+}
+
 .jl-title-large {
   font-size: 64px;
 }
@@ -843,6 +920,43 @@ p, label {
 
 .jl-no-padding {
   padding: 0 !important;
+}
+
+.jl-box-img {
+  width: 100%;
+  display: table;
+}
+
+.jl-img-responsive {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.jl-page-list {
+  list-style: none;
+  font-family: 'Open Sans', serif;
+}
+
+.jl-page-list > li {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.jl-page-list > li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  background-color: #2CCB69;
 }
 
 
