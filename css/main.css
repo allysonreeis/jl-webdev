@@ -620,7 +620,6 @@ p, label {
   }
 
   .jl-hero h1 {
-    font-size: 48px;
     margin-bottom: 50px;
   }
 
@@ -630,6 +629,10 @@ p, label {
 
   .jl-hero-inner-content {
     position: relative;
+  }
+
+  .jl-hero-inner-content p {
+    margin-bottom: 15px;
   }
 
   .jl-hero-inner-content::before {
@@ -650,6 +653,16 @@ p, label {
     height: 100%;
     display: table;
     border-right: 1px solid #2CCB69;
+  }
+
+  .jl-post p {
+    margin-bottom: 30px;
+  }
+
+  .jl-post-section {
+    width: 100%;
+    display: table;
+    padding: 45px 0;
   }
 
 }
@@ -804,6 +817,10 @@ p, label {
   font-weight: 800;
 }
 
+.jl-title-medium {
+  font-size: 48px;
+}
+
 .jl-title-large {
   font-size: 64px;
 }
@@ -826,6 +843,10 @@ p, label {
 
 .jl-text-black {
   color: #000;
+}
+
+.jl-text-center {
+  text-align: center;
 }
 
 .jl-bg-green {
