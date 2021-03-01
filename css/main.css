@@ -655,6 +655,11 @@ p, label {
     border-right: 1px solid #2CCB69;
   }
 
+  .jl-post {
+    width: 100%;
+    display: table;
+  }
+
   .jl-post p {
     margin-bottom: 30px;
   }
@@ -663,6 +668,19 @@ p, label {
     width: 100%;
     display: table;
     padding: 45px 0;
+  }
+
+  .jl-pre-gallery {
+    padding-bottom: 350px;
+  }
+
+  .jl-post-gallery {
+    display: block;
+  }
+
+  .jl-post-gallery .container {
+    position: relative;
+    top: -270px
   }
 
 }
