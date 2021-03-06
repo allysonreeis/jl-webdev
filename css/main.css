@@ -120,7 +120,7 @@ p, label {
   .jl-overlay {
       width: 100%;
       height: 100vh;
-      display: none;
+      display: /*block*/none;
       position: fixed; 
       z-index: 1000;
       top: 0;
@@ -681,6 +681,67 @@ p, label {
   .jl-post-gallery .container {
     position: relative;
     top: -270px
+  }
+
+  .jl-gallery-frame-container {
+    width: 300px;
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1100;
+  }
+
+  .jl-gallery-frame-inner {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+
+  .jl-close-gallery {
+    width: 45px;
+    height: 45px;
+    display: block;
+    background-color: #000;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: -15px;
+    right: -45px;
+    z-index: 1200;
+  }
+
+  .jl-close-gallery ion-icon {
+    color: springgreen;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+  }
+
+  img.jl-gallery-frame {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1300;
+  }
+
+  .jl-gallery-frame-image {
+    width: 87%;
+    max-width: 87%;
+    display: block;
+    margin: 0 auto;
+    z-index: 1200;
+    border-radius: 30px;
+    position: relative;
+    top: 18px;
   }
 
 }
