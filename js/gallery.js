@@ -5,6 +5,20 @@ var galleryImages = document.querySelectorAll('.jl-thumb-img');
 var closeGallery = document.querySelectorAll('.jl-toggle-gallery');
 var btnNext = document.querySelector('.jl-item-next');
 var btnPrev = document.querySelector('.jl-item-prev');
+var currCounter = document.querySelector('.jl-current-slide');
+var totalCounter = document.querySelector('.jl-total-slide');
+
+
+//Counter Formater
+var counterFormatter = function(n){
+  if (n < 10) {
+    return '0' + n;
+  } else {
+    return n
+  }
+}
+
+totalCounter.innerHTML = counterFormatter(galleryImages.length);
 
 const getImageSrc = function(){
   for (let i = 0; i < galleryImages.length; i++) {
@@ -17,6 +31,9 @@ const getImageSrc = function(){
 
       overlay.classList.add('jl-is-open');
       frameContainer.classList.add('jl-is-open');
+
+      currCounter.innerHTML = counterFormatter(itemNum);
+
     })
   }
 }
@@ -32,8 +49,8 @@ for (let i = 0; i < closeGallery.length; i++) {
 
 /* // NextItem sem loop
 const nextItem = function(){
-  var currItemNum = frameImage.getAttribute('data-index');
-  var nextItem = parseInt(currItemNum) + 1;
+  let currItemNum = frameImage.getAttribute('data-index');
+  let nextItem = parseInt(currItemNum) + 1;
 
   if(galleryImages.length >= nextItem) {
     let item = document.querySelector(`[data-item='${parseInt(nextItem)}']`);
@@ -46,8 +63,8 @@ const nextItem = function(){
 
 // PrevItem sem loop
 const prevItem = function(){
-  var currItemNum = frameImage.getAttribute('data-index');
-  var prevItem = parseInt(currItemNum) - 1;
+  let currItemNum = frameImage.getAttribute('data-index');
+  let prevItem = parseInt(currItemNum) - 1;
 
   if(prevItem > 0) {
     let item = document.querySelector(`[data-item='${parseInt(prevItem)}']`);
@@ -72,6 +89,8 @@ const nextItem = function(){
 
       frameImage.setAttribute('src', nextSrc);
       frameImage.setAttribute('data-index', nextIndex);
+    
+      currCounter.innerHTML = counterFormatter(nextIndex);
     }
   }
 }
@@ -90,6 +109,9 @@ const prevItem = function(){
 
       frameImage.setAttribute('src', prevSrc);
       frameImage.setAttribute('data-index', prevIndex);
+    
+      currCounter.innerHTML = counterFormatter(prevIndex);
+    
     }
   }
 }
