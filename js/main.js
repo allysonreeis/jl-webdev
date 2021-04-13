@@ -52,10 +52,6 @@ for (let i = 0; i < toggleModal.length; i++) {
   });
 }
 
-// Corrige o deslocamento da galeria
-var postGallery = document.querySelector('.jl-post-gallery');
-var postGalleryHeight = postGallery.clientHeight; // Se o ';' for removido, gera um erro na página
-postGallery.style.height = (postGalleryHeight - 270) + 'px'; // Para funcionar sem ';', enter nessa linha
 
 // Scroll com Waypoints
 var myScrollDown = document.querySelector('.jl-scroll-down');

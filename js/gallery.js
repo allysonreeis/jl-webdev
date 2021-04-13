@@ -9,6 +9,11 @@ var currCounter = document.querySelector('.jl-current-slide');
 var totalCounter = document.querySelector('.jl-total-slide');
 var skeletonLoading = document.querySelector('.jl-skeleton-loading');
 
+// Corrige o deslocamento da galeria
+var postGallery = document.querySelector('.jl-post-gallery');
+var postGalleryHeight = postGallery.clientHeight; // Se o ';' for removido, gera um erro na página
+postGallery.style.height = (postGalleryHeight - 270) + 'px'; // Para funcionar sem ';', enter nessa linha
+
 //Counter Formater
 var counterFormatter = function(n){
   if (n < 10) {
