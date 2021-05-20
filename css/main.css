@@ -707,11 +707,13 @@ p, label {
 
   .jl-avatar-sobre {
     position: relative;
+    height: 430px;
   }
 
   .jl-box-img {
+    width: 100%;
     position: absolute;
-    left: -15px;
+    left: 0;
     bottom: 0;
   }
 
@@ -920,6 +922,16 @@ p, label {
   }
 }
 
+@media screen and (min-width: 400px) {
+  .jl-avatar-sobre {
+    height: 500px;
+  }
+
+  .jl-box-img {
+    width: 370px;
+  }
+}
+
 @media screen and (min-width: 576px){
   .jl-hero-inner-content {
     padding: 55px 65px 65px;
@@ -943,6 +955,10 @@ p, label {
 
   .jl-text-center-mob {
     text-align: left;
+  }
+
+  .jl-box-img {
+    width: 350px;
   }
 }
 
@@ -1149,6 +1165,10 @@ p, label {
     top: 17px;
   }
 
+  .jl-avatar-sobre {
+    height: 100%;
+  }
+
   .jl-titulo-sobre {
     width: 100%;
   }
@@ -1166,9 +1186,20 @@ p, label {
     padding-left: 30px;
   }
 
+  .jl-box-img {
+    width: 100%;
+    display: table;
+  }
+
   /* Utilitária */
   .jl-full-height {
     height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1204px) and (max-width: 1024px){
+  .jl-avatar-sobre {
+    height: 500px;
   }
 }
 
@@ -1458,11 +1489,6 @@ p, label {
 
 .jl-no-padding {
   padding: 0 !important;
-}
-
-.jl-box-img {
-  width: 100%;
-  display: table;
 }
 
 .jl-img-responsive {
